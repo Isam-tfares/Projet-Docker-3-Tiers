@@ -8,7 +8,7 @@ require "./app/config.php";
 require_once "./app/todos.php";
 
 $todoModel = new Todo();
-$response = $todoModel->getTodos(10);
+$response = $todoModel->getTodos(20);
 // Create a response array
 
 // Encode the response array as JSON
