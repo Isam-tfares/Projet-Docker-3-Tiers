@@ -17,5 +17,5 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build and push
       run: |
-        docker build -t isamtf/backend:latest ./backend:latest
+        docker build -t isamtf/backend:latest isamtf/backend
         docker push isamtf/backend:latest
