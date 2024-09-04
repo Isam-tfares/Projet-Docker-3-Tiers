@@ -41,3 +41,28 @@ The following diagram illustrates the architecture of the Docker 3-Tier Project:
 ```bash
 git clone https://github.com/Isam-tfares/Projet-Docker-3-Tiers.git
 cd Projet-Docker-3-Tiers
+```
+
+### Start the Application
+
+```bash
+docker-compose up --build
+```
+
+### Access the Application
+- **Frontend**: `http://localhost:3000`
+- **Backend**: `http://localhost:5000`
+- **PhpMyAdmin**: `http://localhost:8080`
+
+## Continuous Integration and Continuous Deployment (CI/CD)
+
+![CI/CD](CI_CD.png)
+
+This project uses GitHub Actions for CI/CD. The pipeline automatically builds and deploys Docker images to Docker Hub whenever changes are pushed to the repository.
+
+### How It Works:
+- **GitHub Actions**: On every `push` or `pull request`, the pipeline triggers a build.
+- **Docker Hub**: The built Docker images are tagged and pushed to the Docker Hub repository.
+
+### Setup:
+Ensure that your GitHub repository has `DOCKER_USERNAME` and `DOCKER_PASSWORD` secrets configured.
